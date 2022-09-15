@@ -1,0 +1,51 @@
+.main-container{min-height: 100%;display: flex;flex-direction:column; clear:both;}
+.main-container > .headerpart, .main-container > .footerpart{display: flex;flex-direction:column;clear:both;}
+.main-container > .bodypart{display: flex;flex: 1 1 auto; flex-direction:column;}
+.navbar .active{ color: var(--color5_1)}
+
+/* navbar start */
+.navwrap{ position:relative; height: 100%;}
+.navicon{display:none;}
+
+@media (min-width:992px) {
+.navcolum{display:flex;flex-wrap:wrap;height:100%;clear:both;}
+.navcolum > .nav{flex: 0 0 auto;width: auto;}
+.navcolum > .nav > a{padding: 0 10px;display: flex; align-items: center; color:var(--color2_1);}
+.navcolum > .nav > a.active{color:var(--color5_1);}
+}
+
+@media (max-width:993px) {
+.navicon{ height: 100%; display:flex; align-items:center; justify-content:center; width:55px;}
+.navcolum{position:absolute; top:100%; right:110%; width: 200px; background-color:var(--color2_1); box-shadow:var(--shadow1); }
+.navcolum > .nav{ overflow:hidden; clear:both;}
+.navcolum > .nav > a{padding:5px 10px; display:block; color:var(--color2_1);}
+.navcolum > .nav > a.active{color:var(--color5_1);}
+.navslideOpen{left:0;}
+}
+/* navbar end*/
+
+/* login slideright start */
+.loginslideopen{left:0px;}
+.loginslideclose{left: -100%;}
+.loginwrap{ width: 300px; height: 100%; float: right;}
+/* login slideright end */
+
+
+.headersticky{ position: fixed; width: 100%; left: 0; top: 0; z-index: 66;}
+
+.transbg_1{background-color:rgba(0, 0, 0 , 0.8);}
+
+.forms{display:flex;flex-wrap:wrap;align-items:stretch;width:100%;}
+.forms > .inputs{ flex: 1 1 auto;width: 1%;min-width: 0;display: block;}
+.forms > .inputlabel{flex:0 0 auto;width:100%;}
+.forms > .inputicon{display: flex; text-align: center;align-items: center;}
+
+
+.forms .tera{padding:5px;width:100%;height:90px;background-color:#FFF;color:#4d4d4d;}
+
+.forms > .selects{width:100%;height:35px;}
+.forms > .selects > option{padding:8px 10px;border-bottom:solid 1px #f1f1f1;}
+.forms > .fa_right{position:absolute; top: 0; right:0; height:100%; width:30px; z-index:3;display: flex;justify-content: center;align-items: center;}
+.forms > .fa_left{position:absolute; top: 0; left:0; height:100%; width:30px; z-index:3;display: flex;justify-content: center;align-items: center;}
+
+.shadow1{ -webkit-box-shadow:0 0 15px rgba(0,0,0,0.1);box-shadow:0 0 15pxrgba(0,0,0,0.1);}
