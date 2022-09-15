@@ -5,14 +5,12 @@ const cache = {}
 export const getProductActionFn = createAsyncThunk('PRODUCT/GET', async () => {
     let url = 'http://localhost:8000/product'
     if (cache.hasOwnProperty(url)) { 
-        console.log("cache")
         return cache[url]
     }
     else {
         const res = await fetch(url);
         const result = await res.json()
         cache[url] = result
-        console.log("NOt")
         return result
     }
 })

@@ -4,7 +4,7 @@
 .navbar .active{ color: var(--color5_1)}
 
 /* navbar start */
-.navwrap{ position:relative; height: 100%;}
+/* .navwrap{ position:relative; height: 100%;}
 .navicon{display:none;}
 
 @media (min-width:992px) {
@@ -21,7 +21,7 @@
 .navcolum > .nav > a{padding:5px 10px; display:block; color:var(--color2_1);}
 .navcolum > .nav > a.active{color:var(--color5_1);}
 .navslideOpen{left:0;}
-}
+} */
 /* navbar end*/
 
 /* login slideright start */
@@ -32,6 +32,8 @@
 
 
 .headersticky{ position: fixed; width: 100%; left: 0; top: 0; z-index: 66;}
+.notfoundpage{height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #fece73;}
+
 
 .transbg_1{background-color:rgba(0, 0, 0 , 0.8);}
 

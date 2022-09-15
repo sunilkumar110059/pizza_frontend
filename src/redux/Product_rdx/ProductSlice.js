@@ -18,6 +18,13 @@ let PizzaSlice = createSlice({
             }
         },
 
+        cardResetAction: (state) => {
+            return {
+                ...state,
+                cartitems: []
+            }
+        },
+
         cartIncActionFn: (state, action) => {
             let cartIndex = state.cartitems.findIndex((cart) => cart._id === action.payload._id)
             if (cartIndex >= 0) {
@@ -87,5 +94,5 @@ let PizzaSlice = createSlice({
 })
 
 const { actions, reducer } = PizzaSlice
-export const { cardItemActionFn, cardItemAction, cartIncActionFn, cartDecActionFn, cartRemoveActionFn } = actions;
+export const {cardItemAction, cartIncActionFn, cartDecActionFn, cartRemoveActionFn, cardResetAction } = actions;
 export const PizzaSliceReducer = reducer

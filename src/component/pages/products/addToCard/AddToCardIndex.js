@@ -1,12 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState, } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Layout from '../../../../layout/Layout';
 import AddToCartList from './AddToCartList';
 
+import { SuccessButton } from '../../../../shared/SharedComponentPath';
+import { cardResetAction } from '../../../../redux/Product_rdx/ProductSlice';
+
+import { ORDER_SUCCESSFUL } from '../../../../constant/routePath/RoutePath';
+
 
 function AddToCardIndex() {
+    const dispatch = useDispatch();
+    const navigage = useNavigate();
+
     const cartItems = useSelector((state) => state.pizzalist.cartitems)
     const [noData, setNoData] = useState(false)
+
+    const OrderHandle = () => {
+        dispatch(cardResetAction())
+        localStorage.removeItem('CART_ITEMS');
+        navigage(ORDER_SUCCESSFUL)
+    }
 
     useEffect(() => {
         localStorage.setItem('CART_ITEMS', JSON.stringify(cartItems))
@@ -17,6 +32,8 @@ function AddToCardIndex() {
             setNoData(false)
         }
     }, [cartItems])
+
+
 
 
     return (
@@ -42,14 +59,17 @@ function AddToCardIndex() {
                             {noData && <AddToCartList />}
 
                         </table>
-
-
                         {!noData && <h1 className='p-5 text-center'>NO DATA</h1>}
-
                     </div>
+
+                    <SuccessButton
+                        onClickHandle={() => { OrderHandle() }}
+                        ButtonText='Order' />
+
+
                 </div>
             </div>
-        </Layout>
+        </Layout >
 
     )
 }
