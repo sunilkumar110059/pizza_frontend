@@ -31,7 +31,7 @@ function ProductDetailsIndex() {
         <Layout>
             <div className="wrapper bg2_5 py-2 bordercolor2_4 border_bottom1">
                 <div className="container">
-                    <div className="cover fs-4 fw-bold">Product Details</div>
+                    <div className="cover fs-4 fw-bold"> Product Details  </div>
                 </div>
             </div>
             <div className="container">
