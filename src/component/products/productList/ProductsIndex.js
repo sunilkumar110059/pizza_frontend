@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Layout from '../../../../layout/Layout';
+import Layout from '../../../layout/Layout';
 import ProductListing from './ProductList';
-import { getProductActionFn } from '../../../../redux/Product_rdx/ProductAction';
+import { getProductActionFn } from '../../../redux/Product_rdx/ProductAction';
 import Slider from './Slider';
 
 function ProductsIndex() {

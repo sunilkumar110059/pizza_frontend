@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import Layout from '../../../../layout/Layout';
-import { getProductActionFn } from '../../../../redux/Product_rdx/ProductAction'
+import Layout from '../../../layout/Layout';
+import { getProductActionFn } from '../../../redux/Product_rdx/ProductAction'
 import CartDetail from './CartDetail';
 
 function ProductDetailsIndex() {

@@ -45,7 +45,6 @@ function NavBar() {
     return { stickyFun }
   }
 
-
   useEffect(() => {
     const { stickyFun } = headerFix()
     window.addEventListener('scroll', stickyFun)
@@ -54,9 +53,6 @@ function NavBar() {
     }
   }, [])
 
-
-
-
   return (
     <>
       <div id='stickyoffset' style={{ height: stickHeight }}></div>
@@ -64,15 +60,19 @@ function NavBar() {
         <div className="cover py-2 bordercolor2_4 border_bottom1">
           <div className='container'>
             <div className="row navbar">
-              <div className="col"><Link to={HOME_PATH} className="ovr fs-2 fw-bold color5_1 py-1">Pizza Corner</Link></div>
+            
+              <div className="col"><Link to={HOME_PATH} className="ovr fs-2 fw-bold color5_1 py-1">
+                <span className='d-inline-block'><img src={process.env.PUBLIC_URL + '/assets/images/corner_logo.png'} alt="Pizza Corner" /></span>
+                <span className='d-inline-block'>Pizza Corner</span>
+              </Link></div>
               <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={HOME_PATH}>Home</NavLink></div>
               <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={PRODUCTS_PATH}>Product</NavLink></div>
               <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={ADMIN_ADD_PRODUCT_PATH}> Add Pizza</NavLink></div>
-              <div className="col-auto d-flex align-items-center bg2_4">
+              <div className="col-auto d-flex align-items-center">
                 <div className="ovr">
                   <NavLink className="d-block fw-bold" to={ADD_TO_CART_PATH}>
-                    <span className='d-inline-block'>Card</span>
-                    <span className='d-inline-block bg4_1 px-2 color1 ms-2'>{cartItems.length}</span></NavLink>
+                    <div className='d-inline-block'><img src={process.env.PUBLIC_URL + '/assets/images/cart_icon.png'} alt="Cart" /></div>
+                    <div className='d-inline-block bg2_2 px-2 color1 ms-2'>{cartItems.length}</div></NavLink>
                 </div>
               </div>
             </div>

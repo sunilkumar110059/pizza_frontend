@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import { useDispatch } from "react-redux";
-import { SuccessButton } from '../../../../shared/SharedComponentPath';
+import { SuccessButton } from '../../../shared/SharedComponentPath';
 import { useNavigate } from 'react-router-dom';
 
-import { cartIncActionFn, cartDecActionFn } from '../../../../redux/Product_rdx/ProductSlice';
+import { cartIncActionFn, cartDecActionFn } from '../../../redux/Product_rdx/ProductSlice';
 
 
 function CartDetail({ cartDetail }) {

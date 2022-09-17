@@ -11,14 +11,7 @@ let PizzaSlice = createSlice({
         cartitems: getCartItems,
     },
     reducers: {
-        cardItemAction: (state, action) => {
-            return {
-                ...state,
-                cartitems: action.payload
-            }
-        },
-
-        cardResetAction: (state) => {
+        cardResetActionFn: (state) => {
             return {
                 ...state,
                 cartitems: []
@@ -94,5 +87,5 @@ let PizzaSlice = createSlice({
 })
 
 const { actions, reducer } = PizzaSlice
-export const {cardItemAction, cartIncActionFn, cartDecActionFn, cartRemoveActionFn, cardResetAction } = actions;
+export const { cartIncActionFn, cartDecActionFn, cartRemoveActionFn, cardResetActionFn } = actions;
 export const PizzaSliceReducer = reducer

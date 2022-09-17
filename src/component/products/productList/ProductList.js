@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import { SuccessButton, DangerButton } from '../../../../shared/SharedComponentPath'
-import { PRODUCT_DETAIL_PATH } from '../../../../constant/routePath/RoutePath';
+import { SuccessButton, DangerButton } from '../../../shared/SharedComponentPath'
+import { PRODUCT_DETAIL_PATH } from '../../../constant/routePath/RoutePath';
 
-import { cartIncActionFn } from '../../../../redux/Product_rdx/ProductSlice';
+import { cartIncActionFn } from '../../../redux/Product_rdx/ProductSlice';
 
 const ProductList = ({ product }) => {
   const dispatch = useDispatch()

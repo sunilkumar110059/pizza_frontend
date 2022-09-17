@@ -3,6 +3,10 @@
 .main-container > .bodypart{display: flex;flex: 1 1 auto; flex-direction:column;}
 .navbar .active{ color: var(--color5_1)}
 
+.fullpart{min-height: 100%;display: flex;flex-direction:column; clear:both;}
+.fullpart > .toppart, .fullpart > .bottompart{display: flex;flex-direction:column;clear:both;}
+.fullpart > .middlepart{display: flex;flex: 1 1 auto; flex-direction:column;}
+
 /* navbar start */
 /* .navwrap{ position:relative; height: 100%;}
 .navicon{display:none;}

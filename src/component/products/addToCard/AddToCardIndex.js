@@ -1,13 +1,12 @@
 import React, { useEffect, useState, } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Layout from '../../../../layout/Layout';
+import Layout from '../../../layout/Layout';
 import AddToCartList from './AddToCartList';
 
-import { SuccessButton } from '../../../../shared/SharedComponentPath';
-import { cardResetAction } from '../../../../redux/Product_rdx/ProductSlice';
-
-import { ORDER_SUCCESSFUL } from '../../../../constant/routePath/RoutePath';
+import { SuccessButton } from '../../../shared/SharedComponentPath';
+import { cardResetActionFn } from '../../../redux/Product_rdx/ProductSlice';
+import { ORDER_SUCCESSFUL } from '../../../constant/routePath/RoutePath';
 
 
 function AddToCardIndex() {
@@ -18,7 +17,7 @@ function AddToCardIndex() {
     const [noData, setNoData] = useState(false)
 
     const OrderHandle = () => {
-        dispatch(cardResetAction())
+        dispatch(cardResetActionFn())
         localStorage.removeItem('CART_ITEMS');
         navigage(ORDER_SUCCESSFUL)
     }
@@ -32,9 +31,6 @@ function AddToCardIndex() {
             setNoData(false)
         }
     }, [cartItems])
-
-
-
 
     return (
         <Layout>

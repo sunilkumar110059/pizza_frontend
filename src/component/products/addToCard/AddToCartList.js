@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { SuccessButton, DangerButton } from '../../../../shared/SharedComponentPath'
-import { cartIncActionFn, cartDecActionFn, cartRemoveActionFn } from '../../../../redux/Product_rdx/ProductSlice';
+import { SuccessButton, DangerButton } from '../../../shared/SharedComponentPath'
+import { cartIncActionFn, cartDecActionFn, cartRemoveActionFn } from '../../../redux/Product_rdx/ProductSlice';
 
 const AddToCartList = () => {
   const dispatch = useDispatch()

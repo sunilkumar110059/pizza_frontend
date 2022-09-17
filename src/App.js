@@ -11,7 +11,8 @@ import {
 import {
   HomeIndex, AddToCardIndex, ProductDetailsIndex, ProductsIndex,
   NotFound, OrderSuccessFul
-} from './component/pages/PagesComponentPath';
+} from './component/PagesComponentPath';
+
 import { AddPizza } from './admin/AdminComponentPath'
 
 
