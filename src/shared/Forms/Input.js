@@ -29,9 +29,26 @@ function Input(props) {
 
 };
 
+
+
+
 Input.defaultProps = {
     AutoComplete: "off",
 }
+
+// <Input
+// LabelAddClass = "d-block mb-1 fw-bold"
+// LabelText = "First Name"
+// FormAddClass = "border1 bordercolor2_4"
+// InputAddClass = "p-2"
+// InputType = "text"
+// InputName = "firstname"
+// readOnly = "readonly"
+// disabled = "disabled"
+// placeholder = "Placeholder Text"
+// InputValue = { pizzaprice }
+// onChangeHandler = {(e) => onChangeHander(e)}
+// />  
 
 export default Input;
 

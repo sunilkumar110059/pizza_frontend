@@ -6,7 +6,8 @@ import AddToCartList from './AddToCartList';
 
 import { SuccessButton } from '../../../shared/SharedComponentPath';
 import { cardResetActionFn } from '../../../redux/Product_rdx/ProductSlice';
-import { ORDER_SUCCESSFUL } from '../../../constant/routePath/RoutePath';
+import { ROUTE_CLIENT  } from '../../../constant/routePath/RoutePath';
+
 
 
 function AddToCardIndex() {
@@ -19,7 +20,7 @@ function AddToCardIndex() {
     const OrderHandle = () => {
         dispatch(cardResetActionFn())
         localStorage.removeItem('CART_ITEMS');
-        navigage(ORDER_SUCCESSFUL)
+        navigage(ROUTE_CLIENT.ORDER_SUCCESSFUL_PATH)
     }
 
     useEffect(() => {

@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
+import { ROUTE_CLIENT } from '../../../constant/routePath/RoutePath';
 import { useDispatch } from "react-redux";
 import { SuccessButton } from '../../../shared/SharedComponentPath';
 import { useNavigate } from 'react-router-dom';
 
 import { cartIncActionFn, cartDecActionFn } from '../../../redux/Product_rdx/ProductSlice';
-
 
 function CartDetail({ cartDetail }) {
 
@@ -21,9 +21,8 @@ function CartDetail({ cartDetail }) {
 
     const addToCard = (prod) => {
         dispatch(cartIncActionFn(prod))
-        navigate('/products')
+        navigate(ROUTE_CLIENT.PRODUCTS_PATH)
     }
-
 
     return (
         <Fragment>
@@ -50,7 +49,7 @@ function CartDetail({ cartDetail }) {
                         </div>
                         <div className='col-auto d-flex align-items-center'>
                             <SuccessButton
-                                onClickHandle={() => navigate('/products')}
+                                onClickHandle={() => navigate(ROUTE_CLIENT.PRODUCTS_PATH)}
                                 ButtonText='Continue Shoping ...'
                             /> </div>
                     </> :

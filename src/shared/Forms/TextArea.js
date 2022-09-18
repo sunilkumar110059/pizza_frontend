@@ -50,6 +50,6 @@ TextArea.defaultProps = {
 // TeraAutoComplete="on"
 // TeraDisabled="disabled"
 // TeraReadOnly="readonly"
-// /> 
+// />
 
 export default TextArea;

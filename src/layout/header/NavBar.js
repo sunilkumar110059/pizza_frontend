@@ -3,12 +3,9 @@ import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 
-import {
-  // client path
-  HOME_PATH, PRODUCTS_PATH, ADD_TO_CART_PATH,
-  // admin path
-  ADMIN_ADD_PRODUCT_PATH
-} from '../../constant/routePath/RoutePath';
+
+import {ROUTE_CLIENT, ROUTE_ADMIN} from '../../constant/routePath/RoutePath';
+
 
 
 function NavBar() {
@@ -61,16 +58,18 @@ function NavBar() {
           <div className='container'>
             <div className="row navbar">
             
-              <div className="col"><Link to={HOME_PATH} className="ovr fs-2 fw-bold color5_1 py-1">
+              <div className="col"><Link to={ROUTE_CLIENT.HOME_PATH} className="ovr fs-2 fw-bold color5_1 py-1">
                 <span className='d-inline-block'><img src={process.env.PUBLIC_URL + '/assets/images/corner_logo.png'} alt="Pizza Corner" /></span>
                 <span className='d-inline-block'>Pizza Corner</span>
               </Link></div>
-              <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={HOME_PATH}>Home</NavLink></div>
-              <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={PRODUCTS_PATH}>Product</NavLink></div>
-              <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={ADMIN_ADD_PRODUCT_PATH}> Add Pizza</NavLink></div>
+              <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={ROUTE_CLIENT.HOME_PATH}>Home</NavLink></div>
+              <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={ROUTE_CLIENT.ABOUT_PATH}>About Us</NavLink></div>
+              
+              <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={ROUTE_CLIENT.PRODUCTS_PATH}>Product</NavLink></div>
+              <div className="col-auto d-flex align-items-center fw-bold"><NavLink to={ROUTE_ADMIN.ADD_PRODUCT_PATH}> Add Pizza</NavLink></div>
               <div className="col-auto d-flex align-items-center">
                 <div className="ovr">
-                  <NavLink className="d-block fw-bold" to={ADD_TO_CART_PATH}>
+                  <NavLink className="d-block fw-bold" to={ROUTE_CLIENT.ADD_TO_CART_PATH}>
                     <div className='d-inline-block'><img src={process.env.PUBLIC_URL + '/assets/images/cart_icon.png'} alt="Cart" /></div>
                     <div className='d-inline-block bg2_2 px-2 color1 ms-2'>{cartItems.length}</div></NavLink>
                 </div>
