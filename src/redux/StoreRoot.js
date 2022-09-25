@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { PizzaSliceReducer } from './Product_rdx/ProductSlice';
+import { UserAuthSliceReducer } from './Auth/loginAuth/LoginAuthSlice'
 
 const StoreRoot = configureStore({
     reducer: {
-        pizzalist: PizzaSliceReducer,      
+        pizzalist: PizzaSliceReducer,
+        userToken: UserAuthSliceReducer,
         devTools: true,
     }
 

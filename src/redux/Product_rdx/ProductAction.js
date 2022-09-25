@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const cache = {}
 export const getProductActionFn = createAsyncThunk('PRODUCT/GET', async () => {
     let url = 'http://localhost:8000/product'
-    if (cache.hasOwnProperty(url)) { 
+    if (cache.hasOwnProperty(url)) {
         return cache[url]
     }
     else {
@@ -15,6 +15,7 @@ export const getProductActionFn = createAsyncThunk('PRODUCT/GET', async () => {
 })
 
 export const postProductActionFn = createAsyncThunk('PRODUCT/POST', async (prod) => {
+
     const res = await fetch("http://localhost:8000/product", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
